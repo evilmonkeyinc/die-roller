@@ -1,13 +1,18 @@
 {
-  "name": "dm-tools",
-  "version": "1.0.0",
-  "description": "",
+  "name": "die-roller",
+  "version": "0.1.0",
+  "description": "A library that will allow you to take a common die shorthand, such as 2d20+5, and calculate the result",
   "main": "lib/index.js",
-  "typings": "lib/index.d.ts",
+  "types": "lib/index.d.ts",
   "scripts": {
     "prepare": "npm run build",
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "lint": "tslint -p tsconfig.json",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run lint && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "jest": {
     "transform": {
@@ -23,7 +28,7 @@
     "lib"
   ],
   "keywords": [],
-  "author": "",
+  "author": "Scott McGowan (scott.mcgowan@wisemonkeygames.com)",
   "license": "MIT",
   "dependencies": {
     "@types/mathjs": "^4.4.3",
@@ -35,5 +40,16 @@
     "ts-jest": "^23.10.4",
     "tslint": "^5.11.0",
     "typescript": "^3.1.6"
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evilmonkeyinc/die-roller.git"
+  },
+  "bugs": {
+    "url": "https://github.com/evilmonkeyinc/die-roller/issues"
+  },
+  "homepage": "https://github.com/evilmonkeyinc/die-roller#readme"
 }
