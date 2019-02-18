@@ -197,4 +197,39 @@ describe('Roll Expression', () => {
         expect(result.result).toEqual(result.expressions[0].result);
     });
 
+    it('Roll 40 D6, Keep Highest 30', () => {
+        const expression = '40d6kh30';
+        const result = ExpressionHandler.parse(expression);
+        expect(result).toHaveProperty('expression', expression);
+        expect(result).toHaveProperty('expressions');
+        expect(result.expressions).toHaveLength(1);
+        expect(result.expressions[0]).toHaveProperty('roll');
+        expect(result.expressions[0].roll).toBeDefined();
+        if (result.expressions[0].roll !== undefined) {
+            const roll0 = result.expressions[0].roll;
+
+            // Extra check to get round tslint errors
+            expect(roll0).toHaveProperty('quantity', 40);
+            expect(roll0).toHaveProperty('sides', 6);
+            expect(roll0).toHaveProperty('result');
+            expect(roll0).toHaveProperty('action');
+            expect(roll0.action).toHaveProperty('quantity', 30);
+            expect(roll0.action).toHaveProperty('actionType', RollActionType.Keep);
+            expect(roll0.action).toHaveProperty('order', RollActionOrder.Highest);
+            expect(roll0.rolls).toHaveLength(40);
+
+            const sortedRolls = roll0.rolls.slice(0, roll0.rolls.length);
+            sortedRolls.sort((a: number, b: number) => b - a);
+
+            let expectedResult = 0;
+            for (let i = 0; i < 30; i++) {
+                expectedResult += sortedRolls[i];
+            }
+
+            expect(roll0.result).toEqual(expectedResult);
+            expect(roll0.result).toEqual(result.expressions[0].result);
+        }
+        expect(result.result).toEqual(result.expressions[0].result);
+    });
+
 });
