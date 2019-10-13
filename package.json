@@ -1,6 +1,6 @@
 {
   "name": "die-roller",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A library that will allow you to take a common die shorthand, such as 2d20+5, and calculate the result",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

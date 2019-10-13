@@ -1,7 +1,8 @@
-import { ExpressionHandler } from './die/expressionhandler';
+import { ExpressionHandler, regex as dieRegex } from './die/expressionhandler';
 
 export {
     parse,
+    regex,
 };
 
 /**
@@ -10,4 +11,11 @@ export {
  */
 function parse(expression: string): ExpressionHandler {
     return ExpressionHandler.parse(expression);
+}
+
+/**
+ * Gets the RegExp used to parse the die roll epression
+ */
+function regex(): RegExp {
+    return dieRegex;
 }

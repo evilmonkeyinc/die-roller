@@ -1,7 +1,7 @@
 import * as math from 'mathjs';
 import { RollExpression } from './roll_expression';
 
-const regex = /(?:^|^-|(?:(?!^)([*\\+-])))(?:([0-9]{1,})d([0-9]{1,})(?:([kd])([lh])?([0-9]{1,}))?|([0-9]{1,}))/g;
+export const regex = /(?:^|^-|(?:(?!^)([*\\+-])))(?:([0-9]{1,})d([0-9]{1,})(?:([kd])([lh])?([0-9]{1,}))?|([0-9]{1,}))/g;
 
 export class ExpressionHandler {
     public static parse(expression: string): ExpressionHandler {
