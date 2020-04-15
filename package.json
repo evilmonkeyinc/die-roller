@@ -1,6 +1,6 @@
 {
-  "name": "die-roller",
-  "version": "0.2.0",
+  "name": "@evilmonkeyinc/die-roller",
+  "version": "0.2.1",
   "description": "A library that will allow you to take a common die shorthand, such as 2d20+5, and calculate the result",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -55,5 +55,8 @@
   "bugs": {
     "url": "https://github.com/evilmonkeyinc/die-roller/issues"
   },
-  "homepage": "https://github.com/evilmonkeyinc/die-roller#readme"
+  "homepage": "https://github.com/evilmonkeyinc/die-roller#readme",
+  "publishConfig": {
+    "access": "public"
+  }
 }
