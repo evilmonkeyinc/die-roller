@@ -1,5 +1,5 @@
 import { Roll } from './roll';
-import { RollAction, RollActionOrder, RollActionType } from './roll_action';
+import RollAction, { RollActionOrder, RollActionType } from './roll_action';
 
 class RollExpression {
 

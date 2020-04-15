@@ -1,4 +1,15 @@
-class RollAction {
+
+export enum RollActionType {
+    Keep = 'KEEP',
+    Drop = 'DROP',
+}
+
+export enum RollActionOrder {
+    Highest = 'HIGHEST',
+    Lowest = 'LOWEST',
+}
+
+export default class RollAction {
     public quantity: number;
     public actionType: RollActionType;
     public order: RollActionOrder;
@@ -42,15 +53,3 @@ class RollAction {
 
     }
 }
-
-enum RollActionType {
-    Keep = 'KEEP',
-    Drop = 'DROP',
-}
-
-enum RollActionOrder {
-    Highest = 'HIGHEST',
-    Lowest = 'LOWEST',
-}
-
-export { RollAction, RollActionType, RollActionOrder };

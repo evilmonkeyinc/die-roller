@@ -6,7 +6,7 @@ export const regex = /(?:^|^-|(?:(?!^)([*\\+-])))(?:([0-9]{1,})d([0-9]{1,})(?:([
 export class ExpressionHandler {
     public static parse(expression: string): ExpressionHandler {
 
-        const expressions = new Array() as RollExpression[];
+        const expressions = [] as RollExpression[];
 
         let execArray = regex.exec(expression);
         while (execArray != null) {

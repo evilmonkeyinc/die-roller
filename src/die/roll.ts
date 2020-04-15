@@ -1,4 +1,4 @@
-import { RollAction } from './roll_action';
+import RollAction from './roll_action';
 
 class Roll {
 
