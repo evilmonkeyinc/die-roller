@@ -1,7 +1,7 @@
 import { Roll } from './roll';
 import RollAction, { RollActionOrder, RollActionType } from './roll_action';
 
-class RollExpression {
+export class RollExpression {
 
     public static parseRegExpExec(execArray: RegExpExecArray): RollExpression {
 
@@ -56,5 +56,3 @@ class RollExpression {
         this.result = result !== undefined ? result : 0;
     }
 }
-
-export { RollExpression };

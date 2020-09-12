@@ -1,6 +1,6 @@
 import RollAction from './roll_action';
 
-class Roll {
+export class Roll {
 
     /**
      * Returns a random integer between min (inclusive) and max (inclusive)
@@ -35,5 +35,3 @@ class Roll {
         }
     }
 }
-
-export { Roll };

@@ -9,7 +9,7 @@ export function parse(expression: string): ExpressionHandler {
 }
 
 /**
- * Gets the RegExp used to parse the die roll epression
+ * Gets the RegExp used to parse the die roll expression
  */
 export function regex(): RegExp {
     return dieRegex;
