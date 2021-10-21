@@ -31,7 +31,6 @@
   "author": "Scott McGowan (evilmonkeyinc@gmail.com)",
   "license": "MIT",
   "dependencies": {
-    "@types/mathjs": "^9.4.2",
     "mathjs": "^9.5.1"
   },
   "devDependencies": {
