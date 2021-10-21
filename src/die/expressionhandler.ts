@@ -32,6 +32,6 @@ export class ExpressionHandler {
         }
         command += '';
 
-        this.result = Number(math.eval(command));
+        this.result = Number(math.evaluate(command));
     }
 }

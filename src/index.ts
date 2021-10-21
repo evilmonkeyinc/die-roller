@@ -1,4 +1,16 @@
 import { ExpressionHandler, regex as dieRegex } from './die/expressionhandler';
+import { RollExpression } from './die/roll_expression';
+import { Roll } from './die/roll';
+import { RollAction, RollActionOrder, RollActionType } from './die/roll_action';
+
+export {
+    ExpressionHandler,
+    RollExpression,
+    Roll,
+    RollActionOrder,
+    RollActionType,
+    RollAction,
+}
 
 /**
  * Parse a die roll shorthand expression and receive a parsed and calculated response.
