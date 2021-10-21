@@ -1,18 +1,19 @@
 {
   "name": "@evilmonkeyinc/die-roller",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "A library that will allow you to take a common die shorthand, such as 2d20+5, and calculate the result",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "prepare": "npm run build",
     "build": "tsc",
     "test": "jest",
-    "lint": "eslint -c .eslintrc.js --ext .ts src",
+    "lint": "eslint -c .eslintrc --ext .ts src",
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
     "version": "npm run lint && git add -A src",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "semantic-release": "semantic-release"
   },
   "jest": {
     "transform": {
@@ -25,32 +26,31 @@
     "testRegex": "^.+\\.spec\\.ts$"
   },
   "files": [
-    "lib"
+    "/dist"
   ],
   "keywords": [],
-  "author": "Scott McGowan (scott.mcgowan@wisemonkeygames.com)",
+  "author": "Scott McGowan (evilmonkeyinc@gmail.com)",
   "license": "MIT",
   "dependencies": {
-    "@types/mathjs": "^4.4.5",
-    "mathjs": "^5.10.3"
+    "mathjs": "^9.5.1"
   },
   "devDependencies": {
-    "@types/jest": "^23.3.14",
-    "@typescript-eslint/eslint-plugin": "^2.28.0",
-    "@typescript-eslint/eslint-plugin-tslint": "^2.28.0",
-    "@typescript-eslint/parser": "^2.28.0",
-    "eslint": "^6.8.0",
-    "jest": "^25.3.0",
-    "ts-jest": "^23.10.5",
-    "tslint": "^5.20.0",
-    "typescript": "^3.6.4"
+    "@types/jest": "^27.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "eslint": "^8.0.1",
+    "husky": "^7.0.4",
+    "jest": "^27.3.1",
+    "ts-jest": "^27.0.7",
+    "typescript": "^4.4.4",
+    "semantic-release": "^18.0.0"
   },
   "directories": {
-    "lib": "lib"
+    "dist": "dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/evilmonkeyinc/die-roller.git"
+    "url": "https://github.com/evilmonkeyinc/die-roller.git"
   },
   "bugs": {
     "url": "https://github.com/evilmonkeyinc/die-roller/issues"

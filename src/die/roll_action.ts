@@ -9,7 +9,7 @@ export enum RollActionOrder {
     Lowest = 'LOWEST',
 }
 
-export default class RollAction {
+export class RollAction {
     public quantity: number;
     public actionType: RollActionType;
     public order: RollActionOrder;
@@ -53,3 +53,5 @@ export default class RollAction {
 
     }
 }
+
+export default RollAction
